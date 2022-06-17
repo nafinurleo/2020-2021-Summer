@@ -1,0 +1,201 @@
+#include <cstdio>
+#include<GL/gl.h>
+#include <GL/glut.h>
+
+void myDisplay(void)
+{
+glClear (GL_COLOR_BUFFER_BIT);
+glColor3ub (128, 128, 128);
+glPointSize(5.0);
+glBegin(GL_LINES);
+
+//for body
+glBegin(GL_QUADS);
+glColor3ub (123, 121, 121);
+glVertex2i(120,340);
+glVertex2i(400,340);
+glVertex2i(400,360);
+glVertex2i(120,360);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (231, 133, 17);
+glVertex2i(120,320);
+glVertex2i(400,320);
+glVertex2i(400,340);
+glVertex2i(120,340);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (15, 26, 139);
+glVertex2i(120,300);
+glVertex2i(400,300);
+glVertex2i(400,320);
+glVertex2i(120,320);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (10, 10, 10);
+glVertex2i(120,240);
+glVertex2i(400,240);
+glVertex2i(400,300);
+glVertex2i(120,300);
+glEnd();
+
+//for leg
+glBegin(GL_QUADS);
+glColor3ub (123, 121, 121);
+glVertex2i(160,220);
+glVertex2i(200,220);
+glVertex2i(200,280);
+glVertex2i(160,280);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (123, 121, 121);
+glVertex2i(200,220);
+glVertex2i(240,220);
+glVertex2i(240,280);
+glVertex2i(200,280);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (123, 121, 121);
+glVertex2i(280,220);
+glVertex2i(320,220);
+glVertex2i(320,280);
+glVertex2i(280,280);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (123, 121, 121);
+glVertex2i(320,220);
+glVertex2i(360,220);
+glVertex2i(360,280);
+glVertex2i(320,280);
+glEnd();
+
+//for foot
+glBegin(GL_QUADS);
+glColor3ub (15, 26, 139);
+glVertex2i(160,200);
+glVertex2i(240,200);
+glVertex2i(240,220);
+glVertex2i(160,220);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (15, 26, 139);
+glVertex2i(280,200);
+glVertex2i(360,200);
+glVertex2i(360,220);
+glVertex2i(280,220);
+glEnd();
+
+//for thai
+glBegin(GL_QUADS);
+glColor3ub (15, 26, 139);
+glVertex2i(200,260);
+glVertex2i(320,260);
+glVertex2i(320,300);
+glVertex2i(200,300);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (15, 26, 139);
+glVertex2i(320,280);
+glVertex2i(360,280);
+glVertex2i(360,300);
+glVertex2i(320,300);
+glEnd();
+
+//for belly
+glBegin(GL_QUADS);
+glColor3ub (232, 238, 19);
+glVertex2i(160,300);
+glVertex2i(360,300);
+glVertex2i(360,320);
+glVertex2i(160,320);
+glEnd();
+
+//for chest
+glBegin(GL_QUADS);
+glColor3ub (123, 121, 121);
+glVertex2i(160,320);
+glVertex2i(360,320);
+glVertex2i(360,380);
+glVertex2i(160,380);
+glEnd();
+
+//for heart
+glBegin(GL_QUADS);
+glColor3ub (87, 87, 78);
+glVertex2i(200,335);
+glVertex2i(320,335);
+glVertex2i(320,365);
+glVertex2i(200,365);
+glEnd();
+
+//for neck
+glBegin(GL_QUADS);
+glColor3ub (231, 133, 17);
+glVertex2i(200,380);
+glVertex2i(320,380);
+glVertex2i(320,400);
+glVertex2i(200,400);
+glEnd();
+
+//for head
+glBegin(GL_QUADS);
+glColor3ub (15, 26, 139);
+glVertex2i(200,400);
+glVertex2i(320,400);
+glVertex2i(320,440);
+glVertex2i(200,440);
+glEnd();
+
+//for left side
+glBegin(GL_QUADS);
+glColor3ub (15, 26, 139);
+glVertex2i(200,440);
+glVertex2i(240,440);
+glVertex2i(240,460);
+glVertex2i(200,460);
+glEnd();
+
+//for right side
+glBegin(GL_QUADS);
+glColor3ub (15, 26, 139);
+glVertex2i(280,440);
+glVertex2i(320,440);
+glVertex2i(320,460);
+glVertex2i(280,460);
+glEnd();
+
+glFlush ();
+}
+
+
+void myInit (void)
+{
+glClearColor(1.0, 1.0, 0.0, 0.0);
+glMatrixMode(GL_PROJECTION);
+glLoadIdentity();
+gluOrtho2D(0.0, 640.0, 0.0, 480.0);
+}
+
+
+
+
+
+int main(int argc, char** argv)
+{
+glutInit(&argc, argv);
+glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+glutInitWindowSize (640, 480);
+glutInitWindowPosition (100, 150);
+glutCreateWindow ("This is our first project");
+glutDisplayFunc(myDisplay);
+myInit ();
+glutMainLoop();
+}

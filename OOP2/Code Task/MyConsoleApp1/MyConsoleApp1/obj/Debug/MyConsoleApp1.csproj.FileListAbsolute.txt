@@ -1,0 +1,7 @@
+C:\Users\Dell\source\repos\MyConsoleApp1\MyConsoleApp1\bin\Debug\MyConsoleApp1.exe.config
+C:\Users\Dell\source\repos\MyConsoleApp1\MyConsoleApp1\bin\Debug\MyConsoleApp1.exe
+C:\Users\Dell\source\repos\MyConsoleApp1\MyConsoleApp1\bin\Debug\MyConsoleApp1.pdb
+C:\Users\Dell\source\repos\MyConsoleApp1\MyConsoleApp1\obj\Debug\MyConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\MyConsoleApp1\MyConsoleApp1\obj\Debug\MyConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\MyConsoleApp1\MyConsoleApp1\obj\Debug\MyConsoleApp1.exe
+C:\Users\Dell\source\repos\MyConsoleApp1\MyConsoleApp1\obj\Debug\MyConsoleApp1.pdb

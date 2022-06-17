@@ -1,0 +1,34 @@
+using System;
+using System.Linq;
+
+namespace Week3_L_O
+{
+    struct Book
+    {
+        public string bookID;
+        public string title;
+
+        public Book( string bookID, string title)
+        {
+            this.bookID = bookID;
+            this.title = title;
+        }
+        public void show()
+        {
+            Console.WriteLine("Book ID: " + bookID);
+            Console.WriteLine("Book title: "+title.ToUpper());
+        }
+
+
+    }
+    class Program
+    {
+      
+        static void Main(string[] args)
+        {
+            Book b1 = new Book("1-2-1", "The complete reference");
+            b1.show();
+
+        }
+    }
+}

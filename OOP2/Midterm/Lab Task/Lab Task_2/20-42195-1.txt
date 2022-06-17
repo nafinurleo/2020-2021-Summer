@@ -1,0 +1,137 @@
+Task-01
+
+using System;
+
+namespace MyWork_Week3
+{
+    class Archeologist
+    {
+        const int minsalary = 40000;
+        readonly int maxsalary;
+
+        public Archeologist()
+        {
+
+        }
+        public Archeologist(string name, string id, int maxsalary)
+        {
+            this.name = name;
+            this.id = id;
+
+            this.maxsalary = maxsalary;
+        }
+        public string name;
+        internal string id;
+        private string phone;
+        public static string organizationName;
+        public void Test(params object[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Archeologist Information:" + arr[i]);
+            }
+        }
+        public string Phone
+        {
+            set;
+            get;
+        }
+        public void show()
+        {
+            Console.WriteLine("Archeologist Name:" + name);
+            Console.WriteLine("ID:" + id);
+            Console.WriteLine("Organization:" + organizationName);
+            Console.WriteLine("MaxSalary:" + maxsalary);
+            Console.ReadKey();
+        }
+    }
+}
+**********
+
+using System;
+
+namespace MyWork_Week3
+{
+    class Program
+    {
+        enum workWeek
+        {
+            Sunday =2,
+            Tuesday = 3,
+            Moday = 4,
+            Wednesday = 5,
+            Thursday = 6,
+        }
+        static void Main(string[] args)
+        {
+            Archeologist a = new Archeologist("Leo", "72387464", 50000);
+
+            Archeologist.organizationName = "American society Of Overseas Research";
+            a.show();
+            a.Phone = "+8801789654327";
+            Console.WriteLine("Phone Number:" + a.Phone);
+            Console.WriteLine("\n");
+
+            Archeologist a1 = new Archeologist("Wheeler", "78934521", 55000);
+            a1.show();
+            a1.Phone = "+8801789654096";
+            Console.WriteLine("Phone Number:" + a1.Phone);
+            Console.WriteLine("\n");
+
+            Archeologist a2 = new Archeologist("Arthur", "72804537", 60000);
+            a2.show();
+            a2.Phone = "+8801789654568";
+            Console.WriteLine("Phone Number:" + a2.Phone);
+
+            int value = (int)workWeek.Sunday;
+            switch (value)
+            {
+                case 2:
+                Console.WriteLine("It's Sunday");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}
+**********
+**********
+Task-02
+
+using System;
+
+namespace MyWork_Week3
+{
+    class Program
+    {
+        struct Archeologist
+        {
+            public string name;
+            public int salary;
+            public Archeologist(string name, int salary)
+            {
+                this.name = name;
+                this.salary = salary;
+            }
+            public void show()
+            {
+                Console.WriteLine("Name:" + name);
+                Console.WriteLine("Salary:" + salary);
+            }
+            public void operation()
+            {
+                Console.WriteLine(name.ToLower());
+                Console.WriteLine(name.ToUpper());
+            }
+        }
+
+            static void Main(string[] args)
+        {
+
+           Archeologist a = new Archeologist("Leo", 50000);
+            a.show();
+            a.operation();
+            Console.ReadKey();
+        }
+    }
+}

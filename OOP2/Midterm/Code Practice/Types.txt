@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week5_T_O
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //object type
+
+            object o = 10; // boxing
+            object o1 = "hello";
+            string str = o1.ToString();
+            object o2 = 10.5;
+
+            int value = (int)o; //unboxing
+
+            //dynamic type
+            dynamic d = 100;
+            dynamic d1 = "hello class";
+            string s = d1;
+
+            // nullable type
+
+            bool? b = null;
+            int? v = null;
+
+            //annonymous type
+            var info = new { name = "sample" , age = 20};
+            Console.WriteLine("Name: "+info.name + "Age: "+info.age);
+
+        }
+    }
+}

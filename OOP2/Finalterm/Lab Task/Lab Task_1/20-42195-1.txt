@@ -1,0 +1,106 @@
+Task: Interface, Indexer
+**********
+**********
+using System;
+
+namespace My_Work_Week7
+{
+    interface IQs
+    {
+        void Rank(int rank);
+        void archeologistinfo();
+    }
+}
+**********
+using System;
+
+namespace My_Work_Week7
+{
+    interface ICadw
+    {
+        void SalaryCalculate(int basic, int bonus);
+        void archeologistinfo();
+    }
+}
+**********
+using System;
+
+namespace My_Work_Week7
+{
+    class Archeologist : ICadw, IQs
+    {
+        public string name;
+        public string id;
+        public int siteNo;
+
+        public Archeologist()
+        {
+        }
+
+        public Archeologist(string name, string id, int siteNo)
+        {
+            this.name = name;
+            this.id = id;
+            this.siteNo = siteNo;
+        }
+
+        private string[] work = new string[4];
+
+        public string this[int w]
+        {
+            set
+            {
+                work[w] = value;
+            }
+
+            get
+            {
+                return work[w];
+            }
+        }
+
+        public void archeologistinfo()
+        {
+            Console.WriteLine("Archeologist Name: " + name);
+            Console.WriteLine("Archeologist Id: " + id);
+            Console.WriteLine("Archeologist Site: " + siteNo);
+
+        }
+
+        public void SalaryCalculate(int basic, int bonus)
+        {
+            int salary = basic * 12 + bonus * 3;
+            Console.WriteLine("Salary: " + salary);
+        }
+
+        public void Rank(int rank)
+        {
+            Console.WriteLine("Rank: " + rank);
+        }
+    }
+}
+**********
+using System;
+
+namespace My_Work_Week7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Archeologist a = new Archeologist("Mortimer Wheeler", "56-56987-2", 542);
+            a.archeologistinfo();
+            a.Rank(1);
+            a.SalaryCalculate(150000, 75000);
+            a[0] = "Locate suitable excavation sites";
+            a[1] = "Preserve artefacts";
+            a[2] = "Produce simulations";
+            a[3] = "Supervise staff";
+            Console.WriteLine("\nWork Name: " + a[0]);
+            Console.WriteLine("Work Name: " + a[1]);
+            Console.WriteLine("Work Name: " + a[2]);
+            Console.WriteLine("Work Name: " + a[3]);
+            Console.ReadKey();
+        }
+    }
+}

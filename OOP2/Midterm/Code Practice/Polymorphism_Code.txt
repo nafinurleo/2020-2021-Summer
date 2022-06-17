@@ -1,0 +1,184 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    public class Address
+    {
+        public string areaName;
+        private int roadNo;
+        public Address(string areaName, int roadNo)
+        {
+            this.areaName = areaName;
+            this.roadNo = roadNo;
+        }
+        public int RoadNo
+        {
+            get { return roadNo; }
+        }
+    }
+}
+
+****************************************************************************************************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    public class Person
+    {
+        public string name;
+        Address[] address = new Address[2]; // has a relation 
+
+        //Polymorphism
+        // Compile time Polymorphism or static or early binding
+        // method overloading, constructor overloading
+        // method overloading - same name with diffrent parameter and different action
+
+        // Constructor overloading
+        public Person()
+        {
+        }
+        public Person(string name, Address address1, Address address2)
+        {
+            this.name = name;
+            this.address[0] = address1;
+            this.address[1] = address2;
+        }
+        public Person(string name)
+        {
+            this.name = name;
+        }
+        public Person( Address address1, Address address2)
+        {
+            
+            this.address[0] = address1;
+            this.address[1] = address2;
+        }
+        // method overloading
+        public void canHave( string designation, int age)  // parameter sequence diffrent/type/number  
+        {
+            Console.WriteLine("Designation: "+designation);
+        }
+        public void canHave(int weight, string bloodGroup)
+        {
+            Console.WriteLine("blood Group: " + bloodGroup);
+        }
+
+
+        // Run time Polymorphism or dynamic or late binding
+        // method override, virtual, override 
+
+
+        public virtual void Show()
+        {
+            Console.WriteLine("Name: "+name);
+            Console.WriteLine("Address, Area Name: "+ address[0].areaName+ ", Road No: "+ address[0].RoadNo);
+            Console.WriteLine("Address, Area Name: " + address[1].areaName + ", Road No: " + address[1].RoadNo);
+        }
+
+
+    }
+}
+**********************************************************************************************************************
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    public class Student : Person
+    {
+        public string id;
+
+        public Student() : base()
+        {
+        }
+        public Student(string name, Address address1, Address address2, string id) : base(name, address1, address2)
+        {
+            this.id = id;
+        }
+
+        public override void Show() // method override
+        {
+            base.Show();
+            Console.WriteLine("ID: " + id);
+        }
+    }
+}
+***************************************************************************************************************************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class Undergrad : Student
+    {
+        public int totalCredit;
+        public Undergrad() : base()
+        { 
+        }
+        public Undergrad(string name, Address address1, Address address2, string id, int totalCredit) : base(name, address1, address2, id)
+        {
+            this.totalCredit = totalCredit;
+        }
+        public override void Show() // method override
+        {
+            base.Show();
+            Console.WriteLine("Total Credit: " + totalCredit);
+        }
+
+    }
+}
+**************************************************************************************
+using System;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Address a1 = new Address("sampleArea", 10);
+            Address a2 = new Address("sampleArea1", 101);
+            /*Person p = new Person("abc", a1, a2);
+            Console.WriteLine("Person's Info: ");
+            p.Show();
+
+            Console.WriteLine("Student's Info: ");
+            Student s = new Student("test" , a1 , a2 , "1-12");
+            s.Show();
+
+            Console.WriteLine("Undergrad student's Info: ");
+            Undergrad u = new Undergrad("xyz", a1 , a2 , "1-1", 148);
+            u.Show();*/
+            
+            // polymorphic behaviour
+            Person person = new Person("abc", a1, a2);
+            person.Show();
+
+            person = new Student("test", a1, a2, "1-12");
+            person.Show();
+
+            
+
+
+
+
+
+
+        }
+    }
+}

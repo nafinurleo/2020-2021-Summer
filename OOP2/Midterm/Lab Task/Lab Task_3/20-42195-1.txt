@@ -1,0 +1,548 @@
+Association:-
+**********
+**********
+Task-1
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Salary
+    {
+        private double basic;
+        private double bonus;
+        private double other;
+
+        public Salary()
+        {
+        }
+        public Salary(double basic, double bonus, double other)
+        {
+            this.basic = basic;
+            this.bonus = bonus;
+            this.other = other;
+        }
+
+        public double TotalAmount()
+        {
+            return (basic + bonus + other);
+        }
+
+        public double Basic
+        {
+
+            set { basic = value; }
+            get { return basic; }
+        }
+        public double Bonus
+        {
+            set { basic = value; }
+            get { return bonus; }
+        }
+        public double Other
+        {
+            set { basic = value; }
+            get { return other; }
+        }
+
+        public void Show()
+        {
+            Console.WriteLine("Salary Details:- ");
+            Console.WriteLine("\nTotal Salary: " + TotalAmount());
+            Console.WriteLine("\nBasic: " + basic);
+            Console.WriteLine("\nBonus: " + bonus);
+            Console.WriteLine("\nOther: " + other);
+            Console.ReadKey();
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Employee
+    {
+        public string name;
+        public string id;
+        public string email;
+        private int age;
+        private Salary salary;
+
+
+        public Employee()
+        {
+        }
+        public Employee(string name, string id, string email, int age, Salary salary)
+        {
+            this.name = name;
+            this.id = id;
+            this.email = email;
+            this.age = age;
+            this.salary = salary;
+        }
+        public int Age
+        {
+            set { age = value; }
+            get { return age; }
+        }
+
+        public void Show()
+        {
+            Console.WriteLine("Employee Details:- ");
+            Console.WriteLine("\nEmployee name: " + name);
+            Console.WriteLine("\nEmployee Id: " + id);
+            Console.WriteLine("\nEmployee email: " + email);
+            Console.WriteLine("\nEmployee age: " + age);
+            Console.ReadKey();
+            salary.Show();
+
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Salary s = new Salary(20000, 5000, 1500);
+            //s.TotalAmount();
+            //s.Show();
+            Employee e = new Employee("Leo", "20-42195-1", "nafinurleo@gmail.com", 18, s);
+            e.Show();
+        }
+    }
+}
+**********
+**********
+Task-2
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Course
+    {
+        public string courseName;
+        public string courseID;
+        public int credit;
+
+        public Course()
+        {
+        }
+        public Course(string courseName, string courseID, int credit)
+        {
+            this.courseName = courseName;
+            this.courseID = courseID;
+            this.credit = credit;
+        }
+        public void Show()
+        {
+            Console.WriteLine("\nCourse Name: " + this.courseName + "\nCourse ID: " + this.courseID + "\nCredit: " + this.credit);
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Teacher
+    {
+        public string name;
+        public string id;
+        public string email;
+        public Course[] courses;
+
+        public Teacher()
+        {
+        }
+        public Teacher(string name, string id, string email, Course c1, Course c2, Course c3, Course c4)
+        {
+            this.name = name;
+            this.id = id;
+            this.email = email;
+
+            courses = new Course[4];
+            courses[0] = c1;
+            courses[1] = c2;
+            courses[2] = c3;
+            courses[3] = c4;
+        }
+        public void Show()
+        {
+            Console.WriteLine("Name: " + this.name + "\nID: " + this.id + "\nEmail: " + this.email);
+            Console.WriteLine("\nCourses Details:- ");
+
+            for (int i = 0; i < 4; i++)
+            {
+                courses[i].Show();
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Teacher t = new Teacher("Mahjabin Taskin", "17-032442-1", "mahjabin@gmail.com", new Course("Accounting", "0342", 3), new Course("Engineering Management", "5093", 3), new Course("Principal Of Economics", "6789", 2), new Course("Physics 2", "5782", 3));
+            t.Show();
+        }
+    }
+}
+**********
+**********
+Inheritance:-
+**********
+**********
+Task-1
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Vehicle
+    {
+        public string brand;
+        public string modelNumber;
+        private string productionSerial;
+        protected string factoryAPI;
+        internal string tracker;
+
+        public Vehicle()
+        {
+
+        }
+        public Vehicle(string brand, string modelNumber, string productionSerial, string factoryAPI, string tracker)
+        {
+            this.brand = brand;
+            this.modelNumber = modelNumber;
+            this.productionSerial = productionSerial;
+            this.factoryAPI = factoryAPI;
+            this.tracker = tracker;
+        }
+
+        public string ProductionSerial
+        {
+            set { productionSerial = value; }
+            get { return productionSerial; }
+
+        }
+
+        public string FactoryAPI
+        {
+            set { factoryAPI = value; }
+            get { return factoryAPI; }
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine("Brand Name: " + brand);
+            Console.WriteLine("Model Number: " + modelNumber);
+            Console.WriteLine("Production Serial Number: " + productionSerial);
+            Console.WriteLine("Factory Api Key: " + factoryAPI);
+            Console.WriteLine("BTracker: " + tracker);
+            Console.ReadKey();
+
+        }
+    }
+
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Car : Vehicle
+    {
+        protected string engineNumber;
+        public int numberOfWheels;
+        public string lisenceNumber;
+        private string insuranceNumber;
+
+        public Car()
+        { 
+        }
+        public Car(int numberOfWheels, string lisenceNumber, string brand, string modelNumber, string productionSerial, string factoryAPI, string tracker)
+        {
+            this.numberOfWheels = numberOfWheels;
+            this.lisenceNumber = lisenceNumber;
+            this.brand = brand;
+            this.modelNumber = modelNumber;
+            this.factoryAPI = factoryAPI;
+            this.tracker = tracker;
+        }
+
+        public string EngineNumber
+        {
+            set { engineNumber = value; }
+            get { return engineNumber; }
+        }
+
+        public string InsuranceNumber
+        {
+            set { insuranceNumber = value; }
+            get { return insuranceNumber; }
+        }
+
+        public void ShowCarInfo()
+        {
+            Console.WriteLine("Brand: " + brand);
+            Console.WriteLine("Model Number" + modelNumber);
+            Console.WriteLine("Wheels: " + numberOfWheels);
+            Console.WriteLine("Lisence Number: " + numberOfWheels);
+            Console.ReadKey();
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Vehicle vehicle = new Vehicle("Lamborghini", "bg350", "bj7656", "7i6576fgvmjv", "long:777,lat:888");
+            vehicle.ShowInfo();
+
+            Car car = new Car(4, "nm900", "gjh79898", "7989hmnh", "gfgyhh7788", "7i6576fgvmjv", "long:777,\nlat:888");
+            car.ShowCarInfo();
+            car.ShowInfo();
+        }
+    }
+}
+**********
+**********
+Task-2
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class UniversityTeacher : Teacher
+    {
+        private int TotalCourse;
+        public int getTotalCourse
+        {
+            get
+            {
+                return TotalCourse;
+            }
+        }
+        public UniversityTeacher() : base()
+        {
+        }
+        public UniversityTeacher(string name, int age, string id, int TotalCourse) : base(name, age, id)
+        {
+            this.TotalCourse = TotalCourse;
+        }
+        public void show()
+        {
+            Console.WriteLine("University teacher name :" + name);
+            Console.WriteLine("University teacher Age :" + getAge);
+            Console.WriteLine("University teacher id :" + id);
+            Console.WriteLine("University teacher Total Course :" + TotalCourse);
+            Console.ReadKey();
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Teacher : Employee
+    {
+        internal string id;
+
+        public Teacher() : base()
+        {
+        }
+        public Teacher(string name, int age, string id) : base(name, age)
+        {
+            this.id = id;
+        }
+        public void show()
+        {
+            Console.WriteLine("Teacher name:" + name);
+            Console.WriteLine("Teacher age:" + getAge);
+            Console.WriteLine("Teacher id:" + id);
+            Console.ReadKey();
+
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Employee
+    {
+        public string name;
+        private int age;
+        public int getAge
+        {
+            get
+            {
+                return age;
+            }
+        }
+        public Employee()
+        {
+        }
+        public Employee(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        public void show()
+        {
+            Console.WriteLine("Employee name :" + name);
+            Console.WriteLine("Employee age is :" + age);
+            Console.ReadKey();
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee e = new Employee();
+
+
+            Teacher t = new Teacher();
+
+
+            UniversityTeacher ut = new UniversityTeacher();
+
+            ut.show();
+        }
+    }
+}
+**********
+**********
+Task-3
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Undergraduate : Student
+    {
+        public int completecredit;
+
+        internal int incompleteCredit;
+        public Undergraduate() : base()
+        {
+
+        }
+        public Undergraduate(string name, string id, string department, int completecredit, int uncompleteCredit) : base(name, id, department)
+        {
+            this.completecredit = completecredit;
+            this.incompleteCredit = uncompleteCredit;
+        }
+        public void show()
+        {
+            Console.WriteLine("Undergraduate student details:-");
+            Console.WriteLine("\nName: " + name);
+            Console.WriteLine("Id: " + Id);
+            Console.WriteLine("Department: " + department);
+            Console.WriteLine("Complete Credit: " + completecredit);
+            Console.WriteLine("Incomplete Credit: " + incompleteCredit);
+            Console.ReadKey();
+
+
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Graduate : Student
+    {
+        public double cgpa;
+
+        public Graduate() : base()
+        {
+        }
+        public Graduate(string name, string id, string department, double cgpa) : base(name, id, department)
+        {
+            this.cgpa = cgpa;
+        }
+        public void show()
+        {
+            Console.WriteLine("Graduate student details:-");
+            Console.WriteLine("\nName: " + name);
+            Console.WriteLine("Id: " + Id);
+            Console.WriteLine("Department: " + department);
+            Console.WriteLine("Cgpa: " + cgpa);
+            Console.ReadKey();
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Student
+    {
+        public string name;
+        private string id;
+        internal string department;
+
+        public Student()
+        {
+        }
+        public Student(string name, string id, string department)
+        {
+            this.name = name;
+            this.id = id;
+            this.department = department;
+        }
+        public string Id
+        {
+            get { return id; }
+        }
+    }
+}
+**********
+using System;
+
+namespace MyWork_Week4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Undergraduate ut = new Undergraduate("Leo", "20-42195-1", "CSE", 62, 86);
+            ut.show();
+
+            Graduate gt = new Graduate("Lorin", "16-54672-1", "CSE", 3.65);
+            gt.show();
+        }
+    }
+}
+**********
+**********

@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class Person
+    {
+        public string name;
+        Address address; // has a relation 
+
+        public Person()
+        { 
+        }
+        public Person(string name, Address address )
+        {
+            this.name = name;
+            this.address = address;
+        }
+        public void Show()
+        {
+            Console.WriteLine("Name: "+name);
+            Console.WriteLine("Address, Area Name: "+ address.areaName+ "Road No: "+address.RoadNo);
+        }
+
+
+    }
+}
+*******************************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class Address
+    {
+        public string areaName;
+        private int roadNo;
+        public Address(string areaName, int roadNo)
+        {
+            this.areaName = areaName;
+            this.roadNo = roadNo;
+        }
+        public int RoadNo
+        {
+            get { return roadNo; }
+        }
+    }
+}
+*****************************************
+using System;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Address a = new Address("sampleArea", 10);
+            Person p = new Person("abc", a);
+            p.Show();
+
+        }
+    }
+}

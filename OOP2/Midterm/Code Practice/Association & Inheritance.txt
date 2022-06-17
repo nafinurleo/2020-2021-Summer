@@ -1,0 +1,139 @@
+using System;
+
+
+namespace Week4_T_O
+{
+    public class Address
+    {
+        public int roadNo;
+        private string houseName;
+
+        public Address(int roadNo, string houseName)
+        {
+            this.roadNo = roadNo;
+            this.houseName = houseName;
+        }
+        public string HouseName
+        {
+            get { return houseName; }
+        }
+
+    }
+}
+************************************************************************************
+using System;
+
+
+namespace Week4_T_O
+{
+    public class Person
+    {
+        public string name; 
+        Address[] address = new Address[2]; // has a relation
+
+        public Person()
+        { 
+        }
+        public Person(string name , Address address1, Address address2)
+        {
+            this.name = name;
+            this.address[0] = address1;
+            this.address[1] = address2;
+        }
+        public void Show()
+        {
+            Console.WriteLine("Name: "+name);
+            Console.WriteLine("Address, Road No: "+ address[0].roadNo+" , House Name: " + address[0].HouseName  );
+            Console.WriteLine("Address, Road No: " + address[1].roadNo + " , House Name: " + address[1].HouseName);
+        }
+    }
+}
+************************************************************************************************************************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week4_T_O
+{
+    public class Student : Person
+    {
+        public string id;
+
+        public Student() : base()
+        { 
+        }
+        public Student(string name, Address address1, Address address2, string id) : base(name, address1, address2)
+        {
+            this.id = id;
+        }
+        public void ShowID()
+        {
+            Console.WriteLine("ID: " + id);
+        }
+    }
+}
+***********************************************************************************************************************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week4_T_O
+{
+    class Undergraduate : Student
+    {
+        public int totalCredit;
+
+        public Undergraduate() : base()
+        { 
+        }
+        public Undergraduate(string name, Address address1, Address address2, string id, int totalCredit) : base(name, address1, address2, id)
+        {
+            this.totalCredit = totalCredit;
+        }
+
+    }
+}
+**********************************************************************************************************************************************************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week4_T_O
+{
+    class Masters : Student
+    {
+	//Complete yourself
+    }
+}
+*****************************************************************************************************************************
+using System;
+
+namespace Week4_T_O
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Address a1 = new Address(15, "Sample");
+            Address a2 = new Address(11, "SampleHouse");
+            // Person p = new Person("abc", a1, a2);
+
+            //p.Show();
+            //Student s = new Student("xyz", a1 , a2 , "1-1");
+            //s.Show();
+            //s.ShowID();
+            Undergraduate u = new Undergraduate("abc", a1, a2, "1-3", 148);
+            u.Show();
+            u.ShowID();
+
+        }
+    }
+}
+

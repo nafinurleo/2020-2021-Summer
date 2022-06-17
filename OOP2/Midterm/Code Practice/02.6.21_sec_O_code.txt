@@ -1,0 +1,111 @@
+using System;
+
+
+namespace lab2_M
+{
+    class Student
+    {
+        string name; // attribute or properties instance variable
+        float cgpa;
+
+        public Student() // default constructor
+        {
+            this.name = "N/A";
+            this.cgpa = 0.0f;
+        }
+        public Student(string name) // parameterized constructor
+        {
+            this.name = name;
+        }
+        public Student(string name, float cgpa ) // parameterized constructor
+        {
+            this.name = name;
+            this.cgpa = cgpa;
+        }
+        public float GetCgpa()
+        {
+            return this.cgpa;
+        }
+        public void DisplayInfo()
+        {
+            Console.WriteLine("Name: "+name);
+            Console.WriteLine("CGPA: " + cgpa);
+        }
+    }
+}
+**************************************************************************************************
+using System;
+
+
+namespace lab2_M
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s = new Student("sample", 3.0f);
+            s.DisplayInfo();
+        }
+    }
+}
+************************************End************************************************
+using System;
+
+namespace Week_2_Lab_O
+{
+    class Sample_keyword
+    {
+        public void TestMethod(ref int value) // ref
+        {
+            value += 10;
+            Console.WriteLine("Inside TestMethod,the value is: "+value);
+        }
+        public void TestMethod1(out int value) // out
+        {
+            value = 10;
+            value += 10;
+            Console.WriteLine("Inside TestMethod1,the value is: " + value);
+        }
+        public void TestMethod3( params int[] a)//params
+        {
+            int sum = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                sum = sum + a[i];
+            }
+            Console.WriteLine("Sum is: " + sum);
+        }
+        public void TestMethod4(params object[] a)//params
+        {
+            
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.WriteLine("Element is: " +a[i] );
+            }
+           
+        }
+    }
+}
+*******************************************************************************
+using System;
+
+namespace Week_2_Lab_O
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Sample_keyword s = new Sample_keyword();
+            int x = 5;
+            /*s.TestMethod(ref x); // ref
+            Console.WriteLine("Inside Main Method,the value is: " + x);*/
+
+            /*s.TestMethod1(out x); // out
+            Console.WriteLine("Inside Main Method,the value is: " + x);*/
+            /*s.TestMethod3(5);
+            s.TestMethod3(5, 10);
+            s.TestMethod3(4,5,6,7,8);*/
+            s.TestMethod4("Hello", 4.5, 100, true);
+        }
+    }
+}

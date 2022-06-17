@@ -1,0 +1,157 @@
+Name: Nafinur Leo
+Id: 20-42195-1
+**********
+#include <cstdio>
+#include<GL/gl.h>
+#include <GL/glut.h>
+
+void myDisplay(void)
+{
+glClear (GL_COLOR_BUFFER_BIT);
+glPointSize(5);
+
+glBegin(GL_QUADS);
+glColor3ub (0,255,0);
+glVertex2i(850,250);
+glVertex2i(0,250);
+glVertex2i(0,0);
+glVertex2i(850,0);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (0,229,255);
+glVertex2i(850,550);
+glVertex2i(0,550);
+glVertex2i(0,250);
+glVertex2i(850,250);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (128,0,0);
+glVertex2i(420,250);
+glVertex2i(210,400);
+glVertex2i(0,250);
+glVertex2i(420,250);
+glVertex2i(850,250);
+glVertex2i(620,400);
+glVertex2i(419,250);
+glVertex2i(850,250);
+glEnd();
+
+glBegin(GL_POLYGON);
+glColor3ub (0,128,0);
+glVertex2i(150,310);
+glVertex2i(70,270);
+glVertex2i(100,250);
+glVertex2i(70,220);
+glVertex2i(100,200);
+glVertex2i(50,150);
+glVertex2i(250,150);
+glVertex2i(200,200);
+glVertex2i(230,220);
+glVertex2i(200,250);
+glVertex2i(230,270);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub (128,0,0);
+glVertex2i(180,150);
+glVertex2i(120,150);
+glVertex2i(120,50);
+glVertex2i(180,50);
+
+glColor3ub (230,238,156);
+glVertex2i(500,170);
+glVertex2i(310,170);
+glVertex2i(310,70);
+glVertex2i(500,70);
+
+glColor3ub (220,231,117);
+glVertex2i(650,260);
+glVertex2i(500,170);
+glVertex2i(500,70);
+glVertex2i(650,160);
+glColor3ub (189,0,0);
+glVertex2i(450,200);
+glVertex2i(350,200);
+glVertex2i(295,170);
+glVertex2i(500,170);
+glColor3ub (158,0,0);
+glVertex2i(590,280);
+glVertex2i(450,200);
+glVertex2i(500,170);
+glVertex2i(660,260);
+
+glColor3ub (230,238,156);
+glVertex2i(450,260);
+glVertex2i(350,260);
+glVertex2i(350,200);
+glVertex2i(450,200);
+
+glColor3ub (220,231,117);
+glVertex2i(590,350);
+glVertex2i(450,260);
+glVertex2i(450,200);
+glVertex2i(590,280);
+
+glColor3ub (189,0,0);
+glVertex2i(460,280);
+glVertex2i(340,280);
+glVertex2i(340,260);
+glVertex2i(460,260);
+
+glColor3ub (158,0,0);
+glVertex2i(595,360);
+glVertex2i(460,280);
+glVertex2i(460,260);
+glVertex2i(595,340);
+
+glColor3ub (158,0,0);
+glVertex2i(595,360);
+glVertex2i(460,360);
+glVertex2i(460,340);
+glVertex2i(595,340);
+glVertex2i(460,360);
+glVertex2i(340,280);
+glVertex2i(370,280);
+glVertex2i(470,340);
+
+glColor3ub (112,112,112);
+glVertex2i(560,340);
+glVertex2i(470,340);
+glVertex2i(370,280);
+glVertex2i(460,280);
+
+glColor3ub (158,0,0);
+glVertex2i(450,120);
+glVertex2i(350,120);
+glVertex2i(350,70);
+glVertex2i(450,70);
+glVertex2i(420,240);
+glVertex2i(380,240);
+glVertex2i(380,220);
+glVertex2i(420,220);
+glEnd();
+
+glFlush();
+}
+
+void myInit (void)
+{
+glClearColor(1,1,1,0);
+glMatrixMode(GL_PROJECTION);
+glLoadIdentity();
+gluOrtho2D(0.0, 850.0, 0.0, 550.0);
+}
+
+int main(int argc, char** argv)
+{
+glutInit(&argc, argv);
+glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+glutInitWindowSize (850, 550);
+glutInitWindowPosition (100, 150);
+glutCreateWindow ("My Assignment 1");
+glutDisplayFunc(myDisplay);
+myInit ();
+glutMainLoop();
+}

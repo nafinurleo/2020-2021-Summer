@@ -1,0 +1,20 @@
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\bin\Debug\WindowsFormsApp_My Work_Calculator.exe.config
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\bin\Debug\WindowsFormsApp_My Work_Calculator.exe
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\bin\Debug\WindowsFormsApp_My Work_Calculator.pdb
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My_Work_Calculator.Calculator.resources
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My_Work_Calculator.Properties.Resources.resources
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.exe
+C:\Users\Dell\source\repos\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.pdb
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\bin\Debug\WindowsFormsApp_My Work_Calculator.exe.config
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\bin\Debug\WindowsFormsApp_My Work_Calculator.exe
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\bin\Debug\WindowsFormsApp_My Work_Calculator.pdb
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.csproj.AssemblyReference.cache
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My_Work_Calculator.Calculator.resources
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My_Work_Calculator.Properties.Resources.resources
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.csproj.GenerateResource.cache
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.csproj.CoreCompileInputs.cache
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.exe
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp_My Work_Calculator\obj\Debug\WindowsFormsApp_My Work_Calculator.pdb

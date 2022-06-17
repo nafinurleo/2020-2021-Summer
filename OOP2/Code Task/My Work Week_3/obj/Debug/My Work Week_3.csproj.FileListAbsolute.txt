@@ -1,0 +1,7 @@
+C:\Users\Dell\source\repos\My Work Week_3\bin\Debug\My Work Week_3.exe.config
+C:\Users\Dell\source\repos\My Work Week_3\bin\Debug\My Work Week_3.exe
+C:\Users\Dell\source\repos\My Work Week_3\bin\Debug\My Work Week_3.pdb
+C:\Users\Dell\source\repos\My Work Week_3\obj\Debug\My Work Week_3.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\My Work Week_3\obj\Debug\My Work Week_3.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\My Work Week_3\obj\Debug\My Work Week_3.exe
+C:\Users\Dell\source\repos\My Work Week_3\obj\Debug\My Work Week_3.pdb

@@ -1,0 +1,116 @@
+using System;
+
+
+namespace Week3_T_O
+{
+    class Student
+    {
+        // const and readonly
+        const int passMark = 50;// compile time constant , must be initialized during declation, it can not be changed later.
+        readonly int maxMark ; // run time constant , can be initialized either during declation or inside the constructor. Value can be changed or modified only inside the constructor
+
+        public Student()
+        {
+        }
+        public Student(string name, float cgpa , int maxMark)
+        {
+            this.name = name;
+            this.cgpa = cgpa;
+            this.maxMark = maxMark;
+        }
+
+        // public, private. internal 
+
+        // instance variable,
+        public string name;
+        private float cgpa;
+        private string phone;
+        private int age;
+        private string address;
+        internal string id;
+        // class variable
+        public static string courseName;
+
+   
+        // local variable
+        public void Test(int x , int y)
+        {
+            int z = x + y;
+            for (int i = 0; i < 5; i++)
+            {
+                if (z > 50)
+                {
+                    int a = z;
+                }
+              
+            }
+            
+        }
+        public void SetCgpa(float cgpa)
+        {
+            this.cgpa = cgpa;
+        }
+        public float GetCgpa()
+        {
+            return cgpa;
+        }
+        // properties
+        public float Cgpa // read-write properties
+        {
+            set 
+            {
+                cgpa = value;
+            }
+            get
+            {
+                return cgpa;
+            }
+        
+        }
+        public int Age // readonly properties
+        {
+            get
+            {
+                return age;
+            }
+        }
+        public string Address // writeonly properties
+        {
+            set 
+            {
+                address = value;
+            }
+        }
+        public string Phone // auto implemented properties.
+        {
+            set;
+            get;
+        }
+    }
+}
+**************************************************************************************
+
+using System;
+
+namespace Week3_T_O
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // use input 
+
+            
+            Student s = new Student();
+            s.name = "";// name is instance variable
+            Student.courseName = ""; // coursename is class variable
+
+            s.Cgpa = 3.5f;
+            Console.WriteLine("Cgpa:" +s.Cgpa);
+
+            s.Phone = "08765432";
+            Console.WriteLine("phone:" + s.Phone);
+
+        }
+    }
+}

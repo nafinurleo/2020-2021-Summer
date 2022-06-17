@@ -1,0 +1,164 @@
+using System;
+
+namespace MyWork_Week2
+{
+    class Car
+    {
+        string model;
+        string colour;
+        int topSpeed;
+
+        public Car(string model, string colour, int topSpeed)
+        {
+            this.model = model;
+            this.colour = colour;
+            this.topSpeed = topSpeed;
+        }
+        void SetModel(string model)
+        {
+            this.model = model;
+        }
+        void SetColour(string colour)
+        {
+            this.colour = colour;
+        }
+        void SetTopSpeed(int topSpeed)
+        {
+            this.topSpeed = topSpeed;
+        }
+        string GetModel()
+        {
+            return this.model;
+        }
+        string GetColour()
+        {
+            return this.colour;
+        }
+        int GetTopSpeed()
+        {
+            return this.topSpeed;
+        }
+        public void DisplayInfo()
+        {
+            Console.WriteLine("Model: " + model);
+            Console.WriteLine("Colour: " + colour);
+            Console.WriteLine("Top-Speed: " + topSpeed + "km/h");
+            Console.ReadKey();
+        }
+    }
+}
+*****************
+using System;
+
+namespace MyWork_Week2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Car c1 = new Car("Lamborghini", "Red", 390);
+            c1.DisplayInfo();
+            Console.ReadKey();
+        }
+    }
+    }
+}
+*****************
+*****************
+using System;
+
+namespace MyWork_Week2
+{
+    class SemesterDetails
+    {
+        int semesterNumber;
+        float GPA;
+
+        public SemesterDetails()
+        {
+            semesterNumber = 0;
+            GPA = 0;
+        }
+        public SemesterDetails(int semesterNumber)
+        {
+            this.semesterNumber = semesterNumber;
+        }
+        public void GPACalculator(int creditsTaken, params float[] creditsEarned)
+        {
+            float totalCreditsEarned = 0;
+            for (int i = 0; i < creditsEarned.Length; i++)
+                totalCreditsEarned += creditsEarned[i];
+            GPA = totalCreditsEarned / creditsTaken;
+        }
+        public void ListOfSubjects(params string[] listOfSub)
+        {
+            foreach (string i in listOfSub)
+                Console.WriteLine(i);
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine("Semester number: " + semesterNumber);
+            Console.WriteLine("GPA: " + GPA);
+            Console.ReadKey();
+        }
+    }
+}
+*****************
+using System;
+
+namespace MyWork_Week2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SemesterDetails s1 = new SemesterDetails(6);
+            s1.GPACalculator(19, 12, 11.25F, 12, 11.25F, 12F, 12, 4);
+            s1.ListOfSubjects("OOP2", "DLC", "CG", "Math-3", "BS", "Math-1", "IEC_Lab");
+            s1.ShowInfo();
+            Console.ReadKey();
+        }
+    }
+    }
+
+*****************
+*****************
+using System;
+
+namespace MyWork_Week2
+{
+    class SwappingValues
+    {
+        public void SwapValues(ref int c, ref int d)
+        {
+            int num;
+            num = c;
+            c = d;
+            d = num;
+            Console.WriteLine("Inside swap C=" + c);
+            Console.WriteLine("Inside swap D=" + d);
+            Console.ReadKey();
+        }
+    }
+}
+*****************
+using System;
+
+namespace MyWork_Week2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 15;
+            int b = 20;
+
+            SwappingValues sv = new SwappingValues();
+            sv.SwappingValues(ref a, ref b);
+            Console.WriteLine("Inside Main Method a="+ a );
+            Console.WriteLine("Inside Main Method b=" + b);
+            Console.ReadKey();
+        }
+    }
+    }
+}

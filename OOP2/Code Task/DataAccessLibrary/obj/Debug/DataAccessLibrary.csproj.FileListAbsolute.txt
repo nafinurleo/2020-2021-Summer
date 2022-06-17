@@ -1,0 +1,6 @@
+D:\Fifth Semester\OOP2\Code Task\DataAccessLibrary\bin\Debug\DataAccessLibrary.dll
+D:\Fifth Semester\OOP2\Code Task\DataAccessLibrary\bin\Debug\DataAccessLibrary.pdb
+D:\Fifth Semester\OOP2\Code Task\DataAccessLibrary\obj\Debug\DataAccessLibrary.csproj.CoreCompileInputs.cache
+D:\Fifth Semester\OOP2\Code Task\DataAccessLibrary\obj\Debug\DataAccessLibrary.dll
+D:\Fifth Semester\OOP2\Code Task\DataAccessLibrary\obj\Debug\DataAccessLibrary.pdb
+D:\Fifth Semester\OOP2\Code Task\DataAccessLibrary\obj\Debug\DataAccessLibrary.csproj.AssemblyReference.cache

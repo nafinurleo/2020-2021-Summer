@@ -1,0 +1,10 @@
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\bin\Debug\WindowsFormsApp1_My Work_Week9.exe.config
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\bin\Debug\WindowsFormsApp1_My Work_Week9.exe
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\bin\Debug\WindowsFormsApp1_My Work_Week9.pdb
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\obj\Debug\WindowsFormsApp1_My Work_Week9.csproj.AssemblyReference.cache
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\obj\Debug\WindowsFormsApp1_My_Work_Week9.Form1.resources
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\obj\Debug\WindowsFormsApp1_My_Work_Week9.Properties.Resources.resources
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\obj\Debug\WindowsFormsApp1_My Work_Week9.csproj.GenerateResource.cache
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\obj\Debug\WindowsFormsApp1_My Work_Week9.csproj.CoreCompileInputs.cache
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\obj\Debug\WindowsFormsApp1_My Work_Week9.exe
+D:\Fifth Semester\OOP2\Code Task\WindowsFormsApp1_My Work_Week9\obj\Debug\WindowsFormsApp1_My Work_Week9.pdb

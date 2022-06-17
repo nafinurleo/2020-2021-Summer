@@ -1,0 +1,51 @@
+#include <cstdio>
+#include<GL/gl.h>
+#include <GL/glut.h>
+
+void myDisplay(void)
+{
+glClear (GL_COLOR_BUFFER_BIT);
+glColor3ub (128, 128, 128);
+glPointSize(5.0);
+
+glBegin(GL_QUADS);
+
+glVertex2f(-0.5, -0.5);
+glVertex2f(0.5, -0.5);
+glVertex2f(0.5, 0.5);
+glVertex2f(-0.5, 0.5);
+glEnd();
+
+float tx = 0.6;
+float ty = 0.3;
+
+glColor3ub (255, 0, 0);
+glBegin(GL_QUADS);
+
+glVertex2f(-0.5*tx, -0.5*ty);
+glVertex2f(0.5*tx, -0.5*ty);
+glVertex2f(0.5*tx, 0.5*ty);
+glVertex2f(-0.5*tx, 0.5*ty);
+glEnd();
+glFlush ();
+}
+
+void myInit (void)
+{
+glClearColor(0.0, 0.0, 0.0, 0.0);
+glMatrixMode(GL_PROJECTION);
+glLoadIdentity();
+gluOrtho2D(-1, 1, -1, 1);
+}
+
+int main(int argc, char** argv)
+{
+glutInit(&argc, argv);
+glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+glutInitWindowSize (640, 480);
+glutInitWindowPosition (200, 200);
+glutCreateWindow ("Transformation - Translation");
+glutDisplayFunc(myDisplay);
+myInit ();
+glutMainLoop();
+}

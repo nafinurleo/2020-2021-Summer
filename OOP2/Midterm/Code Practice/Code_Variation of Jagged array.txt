@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /* int[][] jaggedArray = new int[2][];
+
+             jaggedArray[0] = new int[4];
+             jaggedArray[1] = new int[3];
+
+
+
+             for (int i = 0; i < 4; i++)
+             {
+                 Console.Write("jaggedArray[0]["+i+"]: ");
+                 jaggedArray[0][i] = Convert.ToInt32(Console.ReadLine());
+             }
+             for (int i = 0; i < 3; i++)
+             {
+                 Console.Write("jaggedArray[1][" + i + "]: ");
+                 jaggedArray[1][i] = Convert.ToInt32(Console.ReadLine());
+             }
+             Console.WriteLine();
+             Console.WriteLine("Elements are: ");
+             for (int i = 0; i < jaggedArray.Length; i++)
+             {
+                 for (int j = 0; j < jaggedArray[i].Length; j++)
+                 {
+                     Console.WriteLine("jaggedArray["+i+"]["+j+"]: "+jaggedArray[i][j]);
+                 }
+             }*/
+
+            /*int[][] jaggedArray1 = new int[2][];
+
+            jaggedArray1[0] = new int[] { 2 , 3, 5, 6}; //If size mentioning is not needed and elements are known then elements can be initialized like this. 
+            jaggedArray1[1] = new int[] { 12, 13, 15, 16 };
+
+            Console.WriteLine();
+            Console.WriteLine("Elements are: ");
+            for (int i = 0; i < jaggedArray1.Length; i++)
+            {
+                for (int j = 0; j < jaggedArray1[i].Length; j++)
+                {
+                    Console.WriteLine("jaggedArray[" + i + "][" + j + "]: " + jaggedArray1[i][j]);
+                }
+            }*/
+
+            /*int[][] jaggedArray2 = new int[][] // Declaration and initialization at the same time
+            {
+                new int[]{ 2 , 4 , 6} ,
+                new int[]{ 12 , 14 , 16 , 18} ,
+            };
+
+            Console.WriteLine();
+            Console.WriteLine("Elements are: ");
+            for (int i = 0; i < jaggedArray2.Length; i++)
+            {
+                for (int j = 0; j < jaggedArray2[i].Length; j++)
+                {
+                    Console.WriteLine("jaggedArray[" + i + "][" + j + "]: " + jaggedArray2[i][j]);
+                }
+            }*/
+
+            /*int[][,] jaggedArray3 = new int[2][,]; // 1D jagged array where each row consists of 2D array
+
+            int[][,] jaggedArray4 = new int[2][,] // Declaration and initialization at the same time
+            {
+                new int[,]{ { 3, 5 } , { 11 , 13 } },
+                new int[,]{ { 33, 55 } , { 21 , 31 } },
+
+            };
+
+            for (int i = 0; i < jaggedArray4.Length; i++)
+            { 
+                int d = 0;
+                for (int j = 0; j < jaggedArray4[i].GetLength(d); j++)
+                {
+                    for (int k = 0; k < jaggedArray4[j].Rank; k++) // .Rank provides total dimension. here its providing 2 as its 2D
+                    {
+                        Console.WriteLine("jaggedArray4[" + i +"]["+ j + ", " + k +"]: " + jaggedArray4[i][j, k] + " ");
+                    }
+                }
+                d++;
+                
+            }*/
+        }
+
+    }
+    }
+

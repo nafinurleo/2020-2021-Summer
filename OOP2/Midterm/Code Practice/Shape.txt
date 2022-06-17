@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week5_T_O
+{
+    abstract public class Shape
+    {
+        public double height, width;
+        public Shape()
+        { 
+        }
+        public Shape(double height, double width)
+        {
+            this.height = height;
+            this.width = width;
+        }
+        public void Show()
+        {
+            Console.WriteLine("Height: "+height+ " Width: "+width);
+        }
+
+        public abstract void CalculateArea();
+
+    }
+}
+
+
+************************************************************************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week5_T_O
+{
+    class Rectangle : Shape
+    {
+        public Rectangle(): base()
+        { 
+        }
+        public Rectangle(double height, double width) : base(height, width)
+        {
+        }
+        public override void CalculateArea()
+        {
+            double area = height * width;
+            Console.WriteLine("Area: " + area );
+        }
+    }
+}
+
+
+*************************************************************************************
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week5_T_O
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Shape s = new Rectangle(3, 4);
+            s.Show();
+            s.CalculateArea();
+            
+        }
+    }
+}
+
+

@@ -1,0 +1,83 @@
+#include <cstdio>
+#include<GL/gl.h>
+#include <GL/glut.h>
+#include <math.h>
+
+int a=150;
+int b=100;
+int c=200;
+int d=100;
+int e=175;
+int f=200;
+
+void myDisplay(void)
+{
+glClear (GL_COLOR_BUFFER_BIT);
+glColor3ub (128, 128, 128);
+
+glBegin(GL_TRIANGLES);
+glVertex2i(a, b);
+glVertex2i(c, d);
+glVertex2i(e, f);
+glEnd();
+
+int a1=a-a;
+int b1=b-b;
+int c1=c-a;
+int d1=d-b;
+int e1=e-a;
+int f1=f-b;
+
+
+
+int angle=45;
+
+int c11=c1*cos(angle)-d1*sin(angle);
+int d11=c1*sin(angle)+d1*cos(angle);
+int e11=e1*cos(angle)-f1*sin(angle);
+int f11=e1*sin(angle)+f1*cos(angle);
+
+glBegin(GL_TRIANGLES);
+glColor3ub (255, 0, 0);
+glVertex2i(a, b);
+glVertex2i(c11+a, d11+b);
+glVertex2i(e11+a, f11+b);
+glEnd();
+
+int angl=-95;
+
+int x11=c1*cos(angl)-d1*sin(angl);
+int y11=c1*sin(angl)+d1*cos(angl);
+int m11=e1*cos(angl)-f1*sin(angl);
+int n11=e1*sin(angl)+f1*cos(angl);
+
+glBegin(GL_TRIANGLES);
+glColor3ub (255, 0, 0);
+glVertex2i(a, b);
+glVertex2i(x11+a, y11+b);
+glVertex2i(m11+a, n11+b);
+glEnd();
+
+
+glFlush ();
+}
+
+void myInit (void)
+{
+glClearColor(0.0, 0.0, 0.0, 0.0);
+glMatrixMode(GL_PROJECTION);
+glLoadIdentity();
+gluOrtho2D(0, 640, 0, 480);
+}
+
+int main(int argc, char** argv)
+{
+glutInit(&argc, argv);
+glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+glutInitWindowSize (640, 480);
+glutInitWindowPosition (200, 200);
+glutCreateWindow ("My Lab Task - 2D Transformation_Rotation_Clockwise & Anticlockwise");
+glutDisplayFunc(myDisplay);
+myInit ();
+glutMainLoop();
+}

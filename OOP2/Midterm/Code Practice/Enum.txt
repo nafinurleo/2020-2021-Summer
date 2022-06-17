@@ -1,0 +1,40 @@
+using System;
+
+
+namespace Week3_L_O
+{
+    class Program
+    {
+        // Enumeration or enum
+
+        enum Week
+        {
+            Saturday = 1, 
+            Sunday,
+            Monday,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday 
+        }
+
+        static void Main(string[] args)
+        {
+            int value = (int)Week.Friday;
+            //Console.WriteLine("Value:"+value);
+            //Console.WriteLine("Value:" +(int)Week.Saturday);
+
+            switch (value)
+            {
+                case 1:
+                    Console.WriteLine("Its saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Its weekend");
+                    break;
+
+            }
+
+        }
+    }
+}
